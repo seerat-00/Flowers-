@@ -1,0 +1,366 @@
+<!Doctype html>
+<html>
+    <head>
+        <title> CSS Template </title>
+        <link href = "style.css"  rel = "stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            function validate()
+            {
+                var name = document.register.NAME.value;
+                var user = document.register.USERNAME.value;
+                var pass = document.register.PASSWORD.value;
+                var cpass = document.register.CONFIRM.value;
+                var email = document.register.EMAIL.value;
+                var con = document.register.CONTACT.value;
+                var dob = document.register.DOB.value;
+                var gender = document.register.GENDER;
+                var state = document.register.STATE.value;
+                var city = document.register.CITY.value;
+                var pun = document.register.PUNJABI.checked;
+                var eng = document.register.ENGLISH.checked;
+                var hindi = document.register.HINDI.checked;
+
+                var status = true;
+                if(name=="")
+                {
+                    document.getElementById("ername").innerHTML = "Enter name";
+                    status = false;
+                }
+                if(user=="")
+                {
+                    document.getElementById("eruser").innerHTML="Enter username";
+                    status = false;
+                }
+                if(pass=="")
+                {
+                    document.getElementById("erpass").innerHTML="Enter password";
+                    status = false;
+                }
+                else if(pass.length < 8)
+                {
+                    document.getElementById("erpass").innerHTML="Enter 8 digit password";
+                    status = false;
+                }
+                if(cpass=="")
+                {
+                    document.getElementById("erconf").innerHTML="Enter password";
+                    status = false;
+                }
+                else if(pass != c.pass)
+                {
+                    document.getElementById("erconf").innerHTML="The password doesn't match";
+                    status = false;
+                }
+                if(email=="")
+                {
+                    document.getElementById("eremail").innerHTML="Enter email";
+                    status = false;   
+                }
+                if(con=="")
+                {
+                    document.getElementById("ercon").innerHTML="Enter conatct number";
+                    status = false;
+                }
+                else if(con.length != 10)
+                {
+                    document.getElementById("ercon").innerHTML="Enter 10 digit number";
+                    status = false;
+                }
+                if(dob=="")
+                {
+                    document.getElementById("erdob").innerHTML="Enter dob";
+                    status = false;
+                }
+                if(gender[0].checked==false && gender[1].checked==false)
+                {
+                    document.getElementById("ergen").innerHTML="Click any one gender";
+                    status = false;
+                }
+                if(state== -1)
+                {
+                    document.getElementById("erstate").innerHTML="Select any state";
+                    status = false;
+                }
+                if(city== -1)
+                {
+                    document.getElementById("ercity").innerHTML="Select any city";
+                    status = false;
+                }
+                if(pun==false && eng==false && hindi==false)
+                {
+                    document.getElementById("erlang").innerHTML="Select any language";
+                    status = false;
+                }
+                return status;
+            }
+
+        </script>
+        <style>
+            .three{
+                height: 100%;
+                width: 500px;
+                float: left;
+                box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                padding: 10px;
+            }
+            .container{
+                text-align: center;
+                padding: 10px;
+                color: #e02e3a;
+                height: 50px;
+                font-size: 20px;
+            }
+            .four{
+                width: 630px;
+                height: 100%;
+                float: left;
+                margin-left: 10px;
+            }
+            .right1{
+                text-align: right;
+                font-size: 20px;
+            }
+            .margin
+            {
+                margin:10px;
+            }
+            .top{
+                height: 200px;
+                width: 220px;
+                padding: 2px;
+                margin-left: 2px;
+            }
+            .bottom{
+                height: 205px;
+                width: 220px;
+                padding: 2px;
+                margin-left: 2px;
+                text-align: center;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 20px;
+                color: #e9505a;
+            }
+            .outer{
+                height: 458px;
+                width: 964px;
+                background-color: #e9505a;
+                padding: 10px;
+                border: 2px solid #d68a8f;
+                margin-left: 150px;
+            }
+            .inner{
+                height: 270px;
+                width: 470px;
+                margin: 2px;
+                padding: 5px;
+            }
+            .top1{
+                height: 30px;
+                width: 460px;
+                text-align: center;
+                padding: 2px;
+            }
+            .center{
+                height:260px;
+                width: 170px;
+                float: left;
+                margin: 2px;
+                padding-left: 5px;
+            }
+            article .center .middle .left{
+                margin: 5px;
+            }
+            .middle{
+                height:260px;
+                width: 280px;
+                float: left;
+                margin: 2px;
+                padding-left: 5px;
+            } 
+            .right{
+                height: 20px;
+                width: 215px;
+                padding: 2px;
+            }
+            .left{
+                height: 20px;
+                width: 200px;
+                padding: 2px;
+            }
+            span{
+                color: red;
+            }
+            .hey{
+                height: 435px;
+                width: 450px;
+                float: left;
+                padding: 10px;
+            }
+            .heyy{
+                height: 400px;
+                width: 450px;
+                float: left;
+                padding: 10px;
+            }
+            img{
+                height: 415px;
+                width: 430px;
+                border: 2px;
+                border-radius: 10px;
+            }
+            .lol{
+                height: 413px;
+                width: 470px;
+                background-color: gainsboro;
+                padding-top: 10px ;
+                border-radius: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2> Blossom & Co. </h2>
+            <div class="right1">
+                <a href="log.html" class="margin"> Log In  </a> 
+                <a href="sign.html" class="margin"> Sign Up </a>
+                           
+            </div>
+        </header>
+        <section>
+            <nav>
+                <div class="top">
+                    <ul>
+                        <li> <a href="layout.html"> Home </a></li>
+                        <li> <a href="About.html"> About Us </a></li>
+                        <li> <a href="Bouqet.html"> Bouquets </a></li>
+                        <li> <a href="gallery.html"> Gallery </a></li>
+                        <li> <a href="Enquiry.html"> Contact </a></li>
+                    </ul>
+                </div>
+
+                <div class="bottom">
+                    <marquee direction="up">
+                        Deals on Specail Occasions<br>
+                        <ol>
+                            <li>Spring Mix</li>
+                            <li>Lilies - Classic Combo</li>
+                            <li>Cool Breeze</li>
+                            <li>Home sweet home</li>
+                            <li>Wonderful in white</li>
+                        </ol>
+                    </marquee>
+                </div>
+            </nav>
+            <article>
+                <div class="outer">
+                    <div class="hey">
+                        <img src="images/welcome.jpg" alt="welcome">
+                    </div>
+                    <div class="heyy">
+                        <div class="lol">
+                    <form action="j.html" method="get" name="register" onsubmit="return validate()">
+                        <div class="top1" style="color: black; font-size: 20px;"> <b> <center> Registration Form </center> </b> </div>
+                        <div class="inner">
+                            <div class="center">
+                                <div class="left"> Name </div> 
+                                <div class="left"> Username </div> 
+                                <div class="left"> Password </div>
+                                <div class="left"> Confirm Password </div> 
+                                <div class="left"> Email </div> 
+                                <div class="left"> Contact </div> 
+                                <div class="left"> DOB </div> 
+                                <div class="left"> Gender </div> 
+                                <div class="left"> State </div>
+                                <div class="left"> City </div> 
+                                <div class="left"> Language </div>  
+                            </div>
+                            <div class="middle">
+                                <div class="right">
+                                    <input type="text" placeholder="Enter name" id="namee" name="NAME" > <span id="ername" ></span>
+                                </div>
+                                <div class="right">
+                                    <input type="text" placeholder="Enter username" id="user" name="USERNAME" > <span id="eruser" ></span>
+                                </div> 
+                                <div class="right">
+                                    <input type="password" placeholder="Enter password" id="pass" name="PASSWORD"    > <span id="erpass" ></span>
+                                </div>
+                                <div class="right">
+                                    <input type="password" placeholder="Confirm password" id="con" name="CONFIRM"    > <span id="erconf" ></span>
+                                </div>
+                                <div class="right">
+                                    <input type="email" placeholder="Enter email" id="email" name="EMAIL"    > <span id="eremail" ></span>
+                                </div>
+                                <div class="right">
+                                    <input type="tel" placeholder="Enter contact" id="cont" name="CONTACT"    > <span id="ercon" ></span>
+                                </div>
+                                <div class="right">
+                                    <input type="date" placeholder="Enter dob" id="dob" name="DOB"    > <span id="erdob" ></span>
+                                </div>
+                                <div class="right" > 
+                                    <input type="radio" name="GENDER"> Male
+                                    <input type="radio" name="GENDER"> Female
+                                    <span id="ergen" ></span>
+                                </div>
+                                <div class="right"  > 
+                                    <select name="STATE">
+                                        <option value="-1"> --Select-- </option>
+                                        <option value="0"> Punjab </option>
+                                        <option value="1"> Haryana </option>
+                                        <option value="2"> Mahrashtra </option>
+                                        <option value="3"> Madhya Pardesh </option>
+                                        <option value="4"> Himachal Pardesh </option>
+                                        <option value="5"> Rajasthan </option>
+                                        <option value="6"> Gujrat </option>
+                                    </select>
+                                    <span id="erstate" ></span>
+                                </div>
+                                <div class="right" > 
+                                    <select name="CITY">
+                                        <option value="-1"> --Select-- </option>
+                                        <option value="0"> Delhi </option>
+                                        <option value="1"> Bengaluru </option>
+                                        <option value="2"> Hyderabad </option>
+                                        <option value="3"> Mumbai </option>
+                                        <option value="4"> Nabha </option>
+                                        <option value="5"> Pune </option>
+                                        <option value="6"> Jaipur </option>
+                                    </select>
+                                    <span id="ercity" ></span>
+                                </div>
+                                <div class="right" > 
+                                    <input type="checkbox" name="HINDI" > Hindi 
+                                    <input type="checkbox" name="PUNJABI"> Punjabi 
+                                    <input type="checkbox" name="ENGLISH"> English 
+    
+                                    <span id="erlang"></span>
+                                </div>
+                            </div> 
+                        </div>  
+                        <div class="top1">
+                            <center>
+                                <input type="submit" value="Submit" id="db" >
+                                <input type="reset" value="Cancel" id="d" >
+                            </center>  
+                        <div class="top1" style="text-align: right;"> </div>
+    
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                </div>   
+            </article>
+        </section>
+        <footer>
+            <p> Contact: xxxxxxxxxx <br>
+                Instagram: @blossom.co.. <br>
+                Twitter: @BLOSSOM.CO <br>
+                Email: blossom.co19@gmail.com <br>
+                This design is made by Seerat Sharma
+            </p>
+        </footer>
+    </body>
+</html>
+    

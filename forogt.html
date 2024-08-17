@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Template</title>
+    <link href="style.css" rel="stylesheet">
+    <script>
+        function validate() {
+            var email = document.getElementById("erema").value;
+            var pass1 = document.getElementById("epass1").value;
+            var pass2 = document.getElementById("epass2").value;
+            var status = true;
+
+            if (email == "") {
+                document.getElementById("ema").innerHTML = "Enter email";
+                status = false;
+            } else {
+                document.getElementById("ema").innerHTML = "";
+            }
+
+            if (pass1 == "") {
+                document.getElementById("epa1").innerHTML = "Enter new password";
+                status = false;
+            } else {
+                document.getElementById("epa1").innerHTML = "";
+            }
+
+            if (pass2 == "") {
+                document.getElementById("epa2").innerHTML = "Confirm your password";
+                status = false;
+            } else if (pass1 !== pass2) {
+                document.getElementById("epa2").innerHTML = "Passwords do not match";
+                status = false;
+            } else {
+                document.getElementById("epa2").innerHTML = "";
+            }
+
+            return status;
+        }
+    </script>
+    <style>
+        .outer {
+            height: 465px;
+            width: 1390px;
+            padding: 3px;
+            position: absolute;
+            opacity: 1;
+        }
+        .one1 {
+            height: 80px;
+            width: 500px;
+            padding-top: 5px;
+        }
+        .inner2 {
+            height: 335px;
+            width: 550px;
+            padding-left: 15px;
+            text-align: left;
+        }
+        .right {
+            text-align: right;
+            font-size: 20px;
+        }
+        .margin {
+            margin: 10px;
+        }
+        .one {
+            height: 200px;
+            width: 220px;
+            padding: 2px;
+            margin-left: 2px;
+        }
+        .bottom {
+            height: 205px;
+            width: 220px;
+            padding: 2px;
+            margin-left: 2px;
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 20px;
+            color: #e9505a;
+        }
+        .top {
+            height: 200px;
+            width: 220px;
+            padding: 2px;
+            margin-left: 2px;
+        }
+        span {
+            color: red;
+        }
+        .email, .pass {
+            height: 90px;
+            width: 400px; 
+            color: rgb(165, 14, 165);
+            font-size: 20px;
+            text-shadow: purple;
+        }
+        .two {
+            height: 25px;
+            width: 518px;
+        }
+        .back {
+            float: left;
+            width: 100%;
+            height: 465px;
+        }
+        img {
+            height: 465px;
+            width: 100%;
+            border-radius: 20px;
+        }
+        .inner {
+            height: 460px;
+            width: 580px;
+            border: solid 2px black;
+            padding: 10px;
+            backdrop-filter: blur(5px);
+            background-color: transparent;
+        }
+        input[type="email"], input[type="password"] {
+            width: 300px; 
+            padding: 12px; 
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Blossom & Co.</h2>
+        <div class="right">
+            <a href="log.html" class="margin">Log In</a>
+            <a href="sign.html" class="margin">Sign Up</a>
+        </div>
+    </header>
+    <section>
+        <nav>
+            <div class="top">
+                <ul>
+                    <li><a href="layout.html">Home</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Bouqet.html">Bouquets</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="Enquiry.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <marquee direction="up">
+                    Deals on Special Occasions<br>
+                    <ol>
+                        <li>Spring Mix</li>
+                        <li>Lilies - Classic Combo</li>
+                        <li>Cool Breeze</li>
+                        <li>Home sweet home</li>
+                        <li>Wonderful in white</li>
+                    </ol>
+                </marquee>
+            </div>
+        </nav>
+        <article>
+            <div class="back">
+                <center>
+                    <div class="outer">
+                        <div class="inner">
+                            <form action="#" method="get" onsubmit="return validate()">
+                                <div class="one1" style="color: purple; font-size: 35px;">
+                                    <b>Forgot Password</b> <br>
+                                </div>
+                                <div class="inner2">
+                                    <div class="email">
+                                        Email <br>
+                                        <input type="email" placeholder="email" id="erema"> <span id="ema"></span>
+                                    </div>
+                                    <div class="pass">
+                                        Password <br>
+                                        <input type="password" placeholder="new password" id="epass1"> <span id="epa1"></span>
+                                    </div>
+                                    <div class="pass">
+                                        Confirm Password <br>
+                                        <input type="password" placeholder="confirm password" id="epass2"> <span id="epa2"></span>
+                                    </div>
+                                </div>
+                                <div class="two">
+                                    <input type="submit" value="Send Enquiry">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </center>
+                <img src="images/field2.jpg" alt="Field">
+            </div>
+        </article>
+    </section>
+    <footer>
+        <p>
+            Contact: xxxxxxxxxx <br>
+            Instagram: @blossom.co <br>
+            Twitter: @BLOSSOM.CO <br>
+            Email: blossom.co19@gmail.com <br>
+            This design is made by Seerat Sharma
+        </p>
+    </footer>
+</body>
+</html>

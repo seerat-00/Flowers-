@@ -1,0 +1,151 @@
+<!Doctype html>
+<html>
+    <head>
+        <title> CSS Template </title>
+        <link href="style.css" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .transform {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                text-align: center;
+                transition: transform 0.5s;
+                transform-style: preserve-3d;
+            }
+            .scroll:hover .transform {
+                transform: rotateY(180deg);
+            }
+            .front, .back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+            }
+            .front {
+                background-color: #e9505a;
+                color: beige;
+                border-radius: 20px;
+            }
+            .back {
+                background-color: #f6a8ad;
+                color: #e9505a;
+                transform: rotateY(180deg);
+                border-radius: 20px;
+            }
+            img {
+                height: 470px;
+                width: 600px;
+                padding: 10px;
+                border-radius: 20px;
+            }
+            .right {
+                text-align: right;
+                font-size: 20px;
+            }
+            .top {
+                height: 200px;
+                width: 220px;
+                padding: 2px;
+                margin-left: 2px;
+            }
+            .bottom {
+                height: 205px;
+                width: 220px;
+                padding: 2px;
+                margin-left: 2px;
+                text-align: center;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 20px;
+                color: #e9505a;
+            }
+            .one, .two{
+                width: 625px;
+                height: 400px;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2> Blossom & Co. </h2>
+            <div class="right">
+                <a href="log.html" class="margin"> Log In </a>
+                <a href="log.html" class="margin"> Sign up </a>
+            </div>
+        </header>
+        <section>
+            <nav>
+                <div class="top">
+                    <ul>
+                        <li><a href="layout.html"> Home </a></li>
+                        <li><a href="About.html"> About Us </a></li>
+                        <li><a href="Bouquet.html"> Bouquets </a></li>
+                        <li><a href="gallery.html"> Gallery </a></li>
+                        <li><a href="Field.html"> Flower field </a></li>
+                        <li><a href="Enquiry.html"> Contact </a></li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <marquee direction="up">
+                        Deals on Special Occasions<br>
+                        <ol>
+                            <li>Spring Mix</li>
+                            <li>Lilies - Classic Combo</li>
+                            <li>Cool Breeze</li>
+                            <li>Home sweet home</li>
+                            <li>Wonderful in white</li>
+                        </ol>
+                    </marquee>
+                </div>
+            </nav>
+            <article>
+                <div class="one">
+                    <div class="transform">
+                        <div class="front">
+                            <img src="images/field.jpg" alt="Cinque Terre">
+                        </div>
+                        <div class="back">
+                            Heyyyy
+                        </div>
+                    </div>
+                    <div class="transform">
+                        <div class="front">
+                            <img src="images/field1.jpg" alt="Cinque Terre">
+                        </div>
+                        <div class="back">
+                            Heyyyy
+                        </div>
+                    </div>
+                </div>
+                <div class="two">
+                    <div class="transform">
+                        <div class="front">
+                            <img src="images/sunflower.jpeg" alt="Cinque Terre">
+                        </div>
+                        <div class="back">
+                            Heyyyy
+                        </div>
+                    </div>
+                    <div class="transform">
+                        <div class="front">
+                            <img src="images/field2.jpg" alt="Cinque Terre">
+                        </div>
+                        <div class="back">
+                            Heyyyy
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <footer>
+            <p> Contact: xxxxxxxxxx <br>
+                Instagram: @blossom.co <br>
+                Twitter: @BLOSSOM.CO <br>
+                Email: blossom.co19@gmail.com <br>
+                This design is made by Seerat Sharma
+            </p>
+        </footer>
+    </body>
+</html>

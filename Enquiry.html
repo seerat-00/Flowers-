@@ -1,0 +1,251 @@
+<!Doctype html>
+<html>
+    <head>
+        <title> CSS Template </title>
+        <link href = "style.css"  rel = "stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            function validate()
+            {
+                var first = document.getElementById("erfir").value;
+                var last = document.getElementById("erlas").value;
+                var email = document.getElementById("erema").value;
+                var con = document.getElementById("ercon").value;
+                var status=true;
+                if(first=="")
+                {
+                    document.getElementById("fir").innerHTML="Enter first name";
+                    status = false;
+                }
+                if(last=="")
+                {
+                    document.getElementById("las").innerHTML="Enter last name";
+                    status = false;
+                }
+                if(email=="")
+                {
+                    document.getElementById("ema").innerHTML="Enter email";
+                    status = false;
+                }
+                    
+                if(con=="")
+                {
+                    document.getElementById("con").innerHTML="Enter con name";
+                    status = false;
+                }
+                else if(con.length != 10)
+                {
+                    document.getElementById("con").innerHTML="Enter 10 digit number";
+                    status = false;
+                }
+                return status;
+            }
+        </script>
+        <style>
+            .outer{
+                height: 465px;
+                width: 1250px;
+                padding: 3px;
+                position: absolute;
+                opacity: 1;
+            }
+            .one1{
+                height: 80px;
+                width: 500px;
+                padding-top: 5px;
+            }
+            .inner2{
+                height: 335px;
+                width: 550px;
+                padding-left: 15px;
+                text-align: left;
+            }
+            .right{
+                text-align: right;
+                font-size: 20px;
+            }
+            .margin
+            {
+                margin:10px;
+            }
+            .one{
+                height: 200px;
+                width: 220px;
+                padding: 2px;
+                margin-left: 2px;
+            }
+            .bottom{
+                height: 205px;
+                width: 220px;
+                padding: 2px;
+                margin-left: 2px;
+                text-align: center;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 20px;
+                color: #e9505a;
+            }
+            .top{
+                height: 200px;
+                width: 220px;
+                padding: 2px;
+                margin-left: 2px;
+            }
+            span{
+                color: red;
+            }
+            .name{
+                height: 50px;
+                width: 400px;
+                color: rgb(242, 173, 43);
+            }
+            .email{
+                height: 50px;
+                width: 400px;
+                color: rgb(242, 173, 43);
+            }
+            .enquiry{
+                height: 50px;
+                width: 400px;
+                color: rgb(242, 173, 43);
+            }
+            .details{
+                height: 115px;
+                width: 400px;
+                color: rgb(242, 173, 43);
+            }
+            .phone{
+                height: 50px;
+                width: 400px;
+                color: rgb(242, 173, 43);
+            }
+            .two{
+                height: 25px;
+                width: 518px;
+            }
+            .back{
+                float: left;
+                width: 100%;               
+                height: 465px;
+            }
+            img{
+                height: 465px;
+                width: 100%;
+                border-radius: 20px;
+            }
+           .inner{
+                height: 460px;
+                width: 580px;
+                border: solid 2px black;
+                padding: 10px;
+                backdrop-filter: blur(5px);
+                background-color: transparent;
+           }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2> Blossom & Co. </h2>
+            <div class="right">
+                <a href="log.html" class="margin"> Log In  </a> 
+                <a href="sign.html" class="margin"> Sign Up </a>
+                           
+            </div>
+        </header>
+        <section>
+            <nav>
+                <div class="top">
+                    <ul>
+                        <li> <a href="layout.html"> Home </a></li>
+                        <li> <a href="About.html"> About Us </a></li>
+                        <li> <a href="Bouqet.html"> Bouquets </a></li>
+                        <li> <a href="gallery.html"> Gallery </a></li>
+                        <li> <a href="Enquiry.html"> Contact </a></li>
+                    </ul>
+                </div>
+
+                <div class="bottom">
+                    <marquee direction="up">
+                        Deals on Specail Occasions<br>
+                        <ol>
+                            <li>Spring Mix</li>
+                            <li>Lilies - Classic Combo</li>
+                            <li>Cool Breeze</li>
+                            <li>Home sweet home</li>
+                            <li>Wonderful in white</li>
+                        </ol>
+                    </marquee>
+                </div>
+            </nav>
+            <article>
+                    <div class="back">
+                        <center>
+                            <div class="outer">
+                                <div class="inner">
+                                    <form action="layout.html" method="get" onsubmit="return validate()">
+                                        <div class="one1" style="color: rgb(242, 173, 43); font-size: 15px;"> <b> Enquiry Form </b> <br> 
+                                            Complete this Enquiry Form to obtain additional information about our services or send personal complaints. 
+                                            We will analyze your enquiry and return to you shortly by email or phone.
+                                        </div>
+
+                                        <div class="inner2"> 
+                                            <div class="name">
+                                                Name* <br>
+                                                <select>
+                                                    <option value="-1"> Title </option>
+                                                    <option value="0"> Ms </option>
+                                                    <option value="1"> Miss </option>
+                                                    <option value="2"> Mrs </option>
+                                                    <option value="3"> Mr </option>
+                                                </select>
+                                                <input type="text" placeholder="first" id="erfir"> <span id="fir"> </span>
+                                                <input type="text" placeholder="last " id="erlas" > <span id="las"> </span> 
+                                            </div>
+                                            <div class="email">
+                                                Email* <br>
+                                                <input type="email" placeholder="Enter email" id="erema"> <span id="ema"> </span>
+                                            </div>
+                                            <div class="enquiry">
+                                                Enquiry Type* <br>
+                                                <select name="Enquiry">
+                                                    <option value="-1"> Select </option>
+                                                    <option value="0"> Price levels </option>
+                                                    <option value="1"> Complaint </option>
+                                                    <option value="2"> Maintenance </option>
+                                                </select>
+                                                <span id="erenquiry" ></span>
+                                            </div>
+                                            <div class="details">
+                                                Details <br>
+                                                <textarea rows="5" col="5"> </textarea>
+                                            </div>
+                                            <div class="phone">
+                                                Phone* <br>
+                                                <input type="tel" placeholder="telephone" id="ercon"> <span id="con"> </span>
+                                                <br>
+                                                * They are mandatory to be filled.   
+                                            </div>
+                                        </div>
+                
+                                        <div class="two">
+                                            <input type="submit" value="Send Enquiry" >
+                                        </div>  
+                                    </form>
+                                </div>
+                            </div> 
+                        </center>          
+                        <img src="images/field.jpg">   
+                    </div> 
+            </article>
+        </section>
+        <footer>
+            <p> Contact: xxxxxxxxxx <br>
+                Instagram: @blossom.co.. <br>
+                Twitter: @BLOSSOM.CO <br>
+                Email: blossom.co19@gmail.com <br>
+                This design is made by Seerat Sharma
+            </p>
+        </footer>
+    </body>
+</html>
+    
