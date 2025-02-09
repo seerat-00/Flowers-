@@ -1,24 +1,16 @@
 pipeline {
-    agent{
-        node{
-            label 'docker-agent'
-        }
+    agent any
+    environment {
+        DOCKER_IMAGE = 'myjenkins-blueocean:latest'
     }
-    
+
     stages {
         stage('Build') {
             steps {
-                echo 'Building...'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Running Tests...'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying...'
+                echo 'Building the Docker image on localhost...'
+                script {
+                    docker.build(DOCKER_IMAGE)
+                }
             }
         }
     }
